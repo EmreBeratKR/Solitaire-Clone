@@ -36,14 +36,6 @@ public class CardController : MonoBehaviour
         createDeck();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            StartCoroutine(winCoroutine());
-        }
-    }
-
     public void initGame(string mode)
     {
         gameMode = mode;
@@ -260,10 +252,6 @@ public class CardController : MonoBehaviour
         card.gameObject.GetComponent<Card>().setDragEvent();
         card.gameObject.GetComponent<Card>().isOpen = true;
         openCardsCount++;
-        if (openCardsCount == shapes.Length * types.Count)
-        {
-            StartCoroutine(winCoroutine());
-        }
     }
 
     public void closeCard(Transform card)
@@ -287,6 +275,11 @@ public class CardController : MonoBehaviour
                 stackShapes[i] = stacks[i].GetChild(0).GetComponent<Card>().shape;
             }
         }
+    }
+
+    public void PlayWinAnimation()
+    {
+        StartCoroutine(winCoroutine());
     }
 
     IEnumerator winCoroutine()

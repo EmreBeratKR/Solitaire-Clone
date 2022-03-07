@@ -296,6 +296,7 @@ public class Card : MonoBehaviour
                         cardMovement.draggingCards[i].localPosition = new Vector3(cardMovement.draggingCards[i].localPosition.x, -440 - cardController.stackOffset * i, 0);
                     }
                 }
+                /*
                 if (cardMovement.draggingCards[0].localPosition.x < -885)
                 {
                     for (int i = 0; i < cardMovement.draggingCards.Count; i++)
@@ -310,6 +311,7 @@ public class Card : MonoBehaviour
                         cardMovement.draggingCards[i].localPosition = new Vector3(885, cardMovement.draggingCards[i].localPosition.y, 0);
                     }
                 }
+                */
             }
             else
             {
@@ -324,6 +326,7 @@ public class Card : MonoBehaviour
                     {
                         transform.localPosition = new Vector3(transform.localPosition.x, -440, 0);
                     }
+                    /*
                     if (transform.localPosition.x < -885)
                     {
                         transform.localPosition = new Vector3(-885, transform.localPosition.y, 0);
@@ -332,6 +335,7 @@ public class Card : MonoBehaviour
                     {
                         transform.localPosition = new Vector3(885, transform.localPosition.y, 0);
                     }
+                    */
                 }   
             }
         }

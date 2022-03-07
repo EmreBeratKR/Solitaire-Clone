@@ -29,6 +29,11 @@ public class MoveHistory : MonoBehaviour
         {
             activateUndo();
         }
+
+        if (WinChecker.instance.isWin)
+        {
+            cardController.PlayWinAnimation();
+        }
     }
 
     public void undoMove()
