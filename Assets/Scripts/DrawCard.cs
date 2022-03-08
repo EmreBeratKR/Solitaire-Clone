@@ -31,6 +31,10 @@ public class DrawCard : MonoBehaviour
             if (cardController.gameMode == "Hard")
             {
                 countOfDraw = 3;
+                if (transform.childCount < 3)
+                {
+                    countOfDraw = transform.childCount;
+                }
             }
 
             for (int i = 1; i <= countOfDraw; i++)
